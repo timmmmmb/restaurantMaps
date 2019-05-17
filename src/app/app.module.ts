@@ -9,13 +9,18 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from '../material-module';
+import { DoubleSlider } from './doubleslider/doubleslider.component';
+
+import { MatSlidefModule } from '../../slidef';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Chips
+    Chips,
+    DoubleSlider
   ],
   imports: [
+    MatSlidefModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
