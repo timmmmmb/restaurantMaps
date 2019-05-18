@@ -1,0 +1,607 @@
+[
+    {
+        "name": "Berghotel Schwarenbach",
+        "website": "https://www.schwarenbach.ch/",
+        "tags": [
+            "hotel"
+        ],
+        "x": 7.6251244,
+        "y": 46.4320455
+    },
+    {
+        "name": "Gourmet Party Service",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 7.5054728,
+        "y": 47.0445969
+    },
+    {
+        "name": "Central",
+        "website": "http://www.central-hospental.ch",
+        "tags": [
+            "hotel"
+        ],
+        "x": 8.5662067,
+        "y": 46.6176495
+    },
+    {
+        "name": "Lehnhof",
+        "website": null,
+        "tags": [
+            "regional"
+        ],
+        "x": 8.6450032,
+        "y": 46.8810098
+    },
+    {
+        "name": "Ospizo del San Gottardo",
+        "website": null,
+        "tags": [
+            "hotel"
+        ],
+        "x": 8.5679863,
+        "y": 46.5553784
+    },
+    {
+        "name": "Sternen",
+        "website": "http://www.sternen-obstalden.ch/",
+        "tags": [
+            "hotel"
+        ],
+        "x": 9.1500322,
+        "y": 47.117365
+    },
+    {
+        "name": "Beaulieu",
+        "website": "https://www.restaurantbeaulieu.ch/",
+        "tags": [
+            "regional",
+            "wheelchair",
+            "outdoor_seating"
+        ],
+        "x": 7.4346467,
+        "y": 46.9513255
+    },
+    {
+        "name": "Ali Baba",
+        "website": "http://www.alibaba-bern.ch/",
+        "tags": [
+            "oriental"
+        ],
+        "x": 7.4307582,
+        "y": 46.9539906
+    },
+    {
+        "name": "Zebra",
+        "website": "http://www.restaurantzebra.ch",
+        "tags": [
+            "regional",
+            "outdoor_seating"
+        ],
+        "x": 7.4256783,
+        "y": 46.9555998
+    },
+    {
+        "name": "Restaurant Linth",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.9820506,
+        "y": 47.224309
+    },
+    {
+        "name": "Sichtwerk",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 7.6015266,
+        "y": 47.6248627
+    },
+    {
+        "name": "Gasthof Schützenhaus",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.966074,
+        "y": 47.229473
+    },
+    {
+        "name": "Hotel RömerTurm",
+        "website": "https://www.roemerturm.ch/",
+        "tags": [
+            "regional",
+            "hotel"
+        ],
+        "x": 9.1174346,
+        "y": 47.1214095
+    },
+    {
+        "name": "Hohenklingen",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.8581363,
+        "y": 47.6669077
+    },
+    {
+        "name": "Metzg",
+        "website": null,
+        "tags": [
+            "hotel"
+        ],
+        "x": 8.7260424,
+        "y": 47.2453596
+    },
+    {
+        "name": "Haus St. Elisabeth",
+        "website": "http://st-elisabeth-hegne.de",
+        "tags": [
+            "hotel",
+            "wheelchair"
+        ],
+        "x": 9.1006061,
+        "y": 47.7098793
+    },
+    {
+        "name": "Gasthof zum Adler",
+        "website": "https://www.adler-grueningen.ch/",
+        "tags": [
+            "outdoor_seating"
+        ],
+        "x": 8.756607,
+        "y": 47.276489
+    },
+    {
+        "name": "Gasthof Hirsch",
+        "website": null,
+        "tags": [
+            "hotel"
+        ],
+        "x": 10.2786532,
+        "y": 47.5128244
+    },
+    {
+        "name": "Gasthof zum Löwen",
+        "website": "https://www.loewen-sonthofen.de/",
+        "tags": [
+            "hotel"
+        ],
+        "x": 10.2810479,
+        "y": 47.5124157
+    },
+    {
+        "name": "Eintracht",
+        "website": "http://www.megableu.ch/",
+        "tags": [
+            "regional"
+        ],
+        "x": 7.5903738,
+        "y": 47.5675379
+    },
+    {
+        "name": "Gatto Nero",
+        "website": "https://www.facebook.com/gatto.nero.90410",
+        "tags": [
+            "italian",
+            "regional"
+        ],
+        "x": 7.5906834,
+        "y": 47.5677788
+    },
+    {
+        "name": "Il Grappolo",
+        "website": "http://www.pizza-ilgrappolo.ch/",
+        "tags": [
+            "italian",
+            "pizza",
+            "outdoor_seating"
+        ],
+        "x": 8.5322408,
+        "y": 47.3361381
+    },
+    {
+        "name": "China Schloss",
+        "website": null,
+        "tags": [
+            "chinese"
+        ],
+        "x": 9.5875271,
+        "y": 47.6695857
+    },
+    {
+        "name": "Taverne Zorbas",
+        "website": null,
+        "tags": [
+            "greek"
+        ],
+        "x": 9.5867984,
+        "y": 47.6706462
+    },
+    {
+        "name": "Dragon Inn",
+        "website": null,
+        "tags": [
+            "chinese",
+            "outdoor_seating"
+        ],
+        "x": 8.5326994,
+        "y": 47.344132
+    },
+    {
+        "name": "La Perla",
+        "website": "https://m.facebook.com/La-Perla-Tettnang--106958006720064/",
+        "tags": [
+            "italian",
+            "wheelchair"
+        ],
+        "x": 9.586782,
+        "y": 47.6708703
+    },
+    {
+        "name": "Bären",
+        "website": null,
+        "tags": [
+            "national",
+            "hotel"
+        ],
+        "x": 9.5896483,
+        "y": 47.6716723
+    },
+    {
+        "name": "Antalya",
+        "website": null,
+        "tags": [
+            "turkish"
+        ],
+        "x": 9.4899884,
+        "y": 47.6563309
+    },
+    {
+        "name": "MediterRana",
+        "website": "http://www.mediterrana.ch",
+        "tags": [
+            "italian",
+            "outdoor_seating"
+        ],
+        "x": 8.5304839,
+        "y": 47.3408021
+    },
+    {
+        "name": "Raststätte Kemptthal",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.6997151,
+        "y": 47.4487247
+    },
+    {
+        "name": "Konstantinos",
+        "website": "https://www.konstantinos-friedrichshafen.xregional.de/",
+        "tags": [
+            "greek",
+            "outdoor_seating"
+        ],
+        "x": 9.4806781,
+        "y": 47.6709726
+    },
+    {
+        "name": "Kirchenfeld",
+        "website": "http://www.kirchenfeld.ch",
+        "tags": [
+            "regional"
+        ],
+        "x": 7.4505679,
+        "y": 46.9436093
+    },
+    {
+        "name": "Ambassador",
+        "website": null,
+        "tags": [
+            "regional"
+        ],
+        "x": 7.4504174,
+        "y": 46.9432228
+    },
+    {
+        "name": "Ziegel oh Lac",
+        "website": "http://www.ziegelohlac.ch/",
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.5368559,
+        "y": 47.3435586
+    },
+    {
+        "name": "UBS Restaurant Flurstrasse",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 8.4929412,
+        "y": 47.382807
+    },
+    {
+        "name": "Shilla",
+        "website": "https://www.shilla.ch/",
+        "tags": [
+            "korean"
+        ],
+        "x": 8.5025715,
+        "y": 47.3814984
+    },
+    {
+        "name": "Pizzeria da Cono",
+        "website": null,
+        "tags": [
+            "italian"
+        ],
+        "x": 8.5012681,
+        "y": 47.3825781
+    },
+    {
+        "name": "Pizza Züri",
+        "website": null,
+        "tags": [
+            "italian"
+        ],
+        "x": 8.4978272,
+        "y": 47.3842422
+    },
+    {
+        "name": "Gabbiano Pizza & Pasta",
+        "website": "http://www.gabbiano-exp.ch/",
+        "tags": [
+            "indian",
+            "pizza"
+        ],
+        "x": 8.5374793,
+        "y": 47.409767
+    },
+    {
+        "name": "Halle7 Dunkelrestaurant Blinde Kuh",
+        "website": null,
+        "tags": [
+            "regional",
+            "wheelchair"
+        ],
+        "x": 7.5937327,
+        "y": 47.5415318
+    },
+    {
+        "name": "Cafe Medina",
+        "website": "http://www.cafemedina.ch/",
+        "tags": [
+            "wheelchair",
+            "outdoor_seating"
+        ],
+        "x": 8.5304612,
+        "y": 47.3420405
+    },
+    {
+        "name": "Haus Hiltl",
+        "website": "https://hiltl.ch/",
+        "tags": [
+            "vegetarian",
+            "wheelchair",
+            "outdoor_seating"
+        ],
+        "x": 8.5367495,
+        "y": 47.3733042
+    },
+    {
+        "name": "Desperado Höngg Mülihalde",
+        "website": "https://www.desperado.ch/",
+        "tags": [
+            "mexican",
+            "outdoor_seating"
+        ],
+        "x": 8.4971562,
+        "y": 47.4020539
+    },
+    {
+        "name": "Bäregghütte",
+        "website": "https://www.baeregg.com/",
+        "tags": [
+            "regional",
+            "outdoor_seating"
+        ],
+        "x": 8.060051,
+        "y": 46.6004697
+    },
+    {
+        "name": "Blümlisalp",
+        "website": null,
+        "tags": [
+            "hotel"
+        ],
+        "x": 7.6756549,
+        "y": 46.4993051
+    },
+    {
+        "name": "Eierhals",
+        "website": "http://www.hotel-eierhals.ch/",
+        "tags": [
+            "fish",
+            "wheelchair"
+        ],
+        "x": 8.6412594,
+        "y": 47.1164861
+    },
+    {
+        "name": "Sunnegga",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 7.769986,
+        "y": 46.0171001
+    },
+    {
+        "name": "Fünfschilling",
+        "website": "https://www.fuenfschilling.de/",
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 7.6017806,
+        "y": 47.6473862
+    },
+    {
+        "name": "Dreiländereck",
+        "website": null,
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 7.6075425,
+        "y": 47.6255783
+    },
+    {
+        "name": "Gipfelrestaurant Chäserrugg",
+        "website": "https://chaeserrugg.ch/",
+        "tags": [
+            "wheelchair"
+        ],
+        "x": 9.3125453,
+        "y": 47.1549658
+    },
+    {
+        "name": "Hundwiler Höhi",
+        "website": "http://www.hundwilerhoehe.ch/",
+        "tags": [
+            "outdoor_seating"
+        ],
+        "x": 9.3325884,
+        "y": 47.3407624
+    },
+    {
+        "name": "Seeblick",
+        "website": null,
+        "tags": [
+            "outdoor_seating"
+        ],
+        "x": 7.67111,
+        "y": 47.1706979
+    },
+    {
+        "name": "Tibits",
+        "website": "https://www.tibits.ch/",
+        "tags": [
+            "vegetarian",
+            "wheelchair"
+        ],
+        "x": 8.731244,
+        "y": 47.5000295
+    },
+    {
+        "name": "Casinotheater",
+        "website": null,
+        "tags": [
+            "regional"
+        ],
+        "x": 8.7264919,
+        "y": 47.499747
+    },
+    {
+        "name": "Amicus",
+        "website": null,
+        "tags": [
+            "mediterranean",
+            "wheelchair"
+        ],
+        "x": 9.4445698,
+        "y": 47.6651122
+    },
+    {
+        "name": "Rheinfels",
+        "website": "https://www.rheinfels.ch/",
+        "tags": [
+            "hotel"
+        ],
+        "x": 8.8591668,
+        "y": 47.6587355
+    },
+    {
+        "name": "Zum Schiff",
+        "website": "http://www.hotel-restaurant-schiff.ch",
+        "tags": [
+            "fish",
+            "hotel",
+            "wheelchair"
+        ],
+        "x": 8.8570223,
+        "y": 47.6602288
+    },
+    {
+        "name": "Wasserfels",
+        "website": null,
+        "tags": [
+            "italian",
+            "hotel",
+            "wheelchair"
+        ],
+        "x": 8.8572063,
+        "y": 47.6600963
+    },
+    {
+        "name": "Hotel Restaurant Adler",
+        "website": null,
+        "tags": [
+            "hotel",
+            "outdoor_seating"
+        ],
+        "x": 8.859654,
+        "y": 47.6594624
+    },
+    {
+        "name": "Weinstube Rother Ochsen",
+        "website": null,
+        "tags": [
+            "outdoor_seating"
+        ],
+        "x": 8.8592705,
+        "y": 47.6592985
+    },
+    {
+        "name": "Gutenberg",
+        "website": "http://www.flammeria-steinamrhein.ch",
+        "tags": [
+            "pizza"
+        ],
+        "x": 8.8595309,
+        "y": 47.6605915
+    },
+    {
+        "name": "Höllboden",
+        "website": "https://www.ischgl.com/bergrestaurant-hoellboden-tirol.de.htm",
+        "tags": [
+            "italian"
+        ],
+        "x": 10.3120354,
+        "y": 46.9748904
+    },
+    {
+        "name": "Danilo",
+        "website": null,
+        "tags": [
+            "regional",
+            "hotel"
+        ],
+        "x": 9.5964518,
+        "y": 46.5974588
+    },
+    {
+        "name": "Restaurant Pizzeria Da Luca",
+        "website": null,
+        "tags": [
+            "pizza"
+        ],
+        "x": 7.7016209,
+        "y": 47.1881332
+    }
+]

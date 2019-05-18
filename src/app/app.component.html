@@ -1,10 +1,13 @@
 
 <h1>{{title}}</h1>
-<chips></chips>
-<div>
-    <doubleslider></doubleslider>
-    <label>HeatMap: </label>
-    <mat-checkbox></mat-checkbox>
+<div class="options">
+    <chips></chips>
+    <button mat-button (click)="changeOptions()">More Options</button>
+    <div *ngIf="moreOptions">
+        <doubleslider></doubleslider>
+        <label>HeatMap: </label>
+        <mat-checkbox></mat-checkbox>
+    </div>
 </div>
 <div id="map">
 
