@@ -23,9 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/leaflet/leaflet.css",
+              "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css"
             ],
-            "scripts": [],
+            "scripts": ["src/assets/leaflet/leaflet.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
