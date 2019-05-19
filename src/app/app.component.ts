@@ -19,15 +19,6 @@ export class AppComponent implements OnInit{
 
   }
   
-  buildOverpassApiUrl(map) {
-    var bounds = map.getBounds().getSouth() + ',' + map.getBounds().getWest() + ',' + map.getBounds().getNorth() + ',' + map.getBounds().getEast();
-    var nodeQuery = 'node[amenity=restaurant](' + bounds + ');';
-    var query = '?data=[out:xml][timeout:100];(' + nodeQuery + ');out body;>;out skel qt;';
-    var baseUrl = 'http://overpass-api.de/api/interpreter';
-    var resultUrl = baseUrl + query;
-    return resultUrl;
-  } 
-  
   ngOnInit() {
     const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
     const iconUrl = 'assets/leaflet/images/marker-icon.png';
@@ -48,9 +39,14 @@ export class AppComponent implements OnInit{
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    //this.http.get('http://localhost:2500/restaurants')
-    L.marker([46.94809, 7.44744]).addTo(map);
+
+    this.http.get('http://localhost:2500/restaurants')
+    .subscribe(
+      data => L.geoJSON(data).addTo(map),
+      err => console.log(err)
+    );
   }
+
 
 
 
