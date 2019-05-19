@@ -1,13 +1,16 @@
 
 <h1>{{title}}</h1>
-<div class="options">
-    <chips></chips>
-    <button mat-button (click)="changeOptions()">More Options</button>
+<div class="options"  mat-dialog-content>
+    <chips [allTags]="allTags" (search)="search()"></chips>
     <div *ngIf="moreOptions">
         <doubleslider></doubleslider>
-        <label>HeatMap: </label>
-        <mat-checkbox></mat-checkbox>
+        <mat-checkbox>HeatMap</mat-checkbox>
     </div>
+    <div mat-dialog-actions align="end">
+        <button mat-raised-button color="primary" (click)="changeOptions()">More Options</button>
+    </div>
+    
+    
 </div>
 <div id="map">
 

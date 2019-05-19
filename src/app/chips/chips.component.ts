@@ -1,5 +1,5 @@
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild, Input, Output, EventEmitter} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete} from '@angular/material';
 import {Observable} from 'rxjs';
@@ -22,10 +22,15 @@ export class Chips {
   tagCtrl = new FormControl();
   filteredTags: Observable<string[]>;
   tags: string[] = [];
-  allTags: string[] = ['Pizza', 'Steak', 'Italian', 'Vegan', 'Vegetarian'];
 
   @ViewChild('input') input: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete;
+
+  @Output()
+    public search = new EventEmitter();
+
+  @Input()
+    public allTags: string[];
 
   constructor() {
     this.filteredTags = this.tagCtrl.valueChanges.pipe(
