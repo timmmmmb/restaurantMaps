@@ -1,10 +1,10 @@
 
 <h1>{{title}}</h1>
 <div class="options"  mat-dialog-content>
-    <chips [allTags]="allTags" (search)="search()"></chips>
+    <chips [allTags]="allTags" (search)="search($event)"></chips>
     <div *ngIf="moreOptions">
         <doubleslider></doubleslider>
-        <mat-checkbox>HeatMap</mat-checkbox>
+        <mat-checkbox [checked]="heatmap" (change)="heatmap = !heatmap">HeatMap</mat-checkbox>
     </div>
     <div mat-dialog-actions align="end">
         <button mat-raised-button color="primary" (click)="changeOptions()">More Options</button>

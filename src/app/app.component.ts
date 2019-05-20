@@ -3,6 +3,7 @@ declare let L;
 import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { icon, Marker } from 'leaflet';
+declare var HeatmapOverlay;
 
 
 
@@ -14,17 +15,28 @@ import { icon, Marker } from 'leaflet';
 })
 
 export class AppComponent implements OnInit{
-  allTags:string[] =  ['Pizza', 'Steak', 'Italian', 'Vegan', 'Vegetarian', 'Rollstuhl'];
+  allTags:string[] =  ['Pizza','Pizzeria','Italien'];
   title = 'restaurantMaps';
   moreOptions:boolean = false;
   map;
-  layerGroup;
+  markerLayer;
+  heatmap:boolean = false;
+
+  heatmapLayer = new HeatmapOverlay({
+    radius: 0.02,
+    maxOpacity: 0.8,
+    scaleRadius: true,
+    useLocalExtrema: true,
+    latField: 'lat',
+    lngField: 'lng',
+    valueField: 'count'
+  });
+
   constructor(private http:HttpClient) {
 
   }
    
   ngOnInit() {
-    
     const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
     const iconUrl = 'assets/leaflet/images/marker-icon.png';
     const shadowUrl = 'assets/leaflet/images/marker-shadow.png';
@@ -45,23 +57,52 @@ export class AppComponent implements OnInit{
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    this.layerGroup = L.layerGroup().addTo(this.map);
-    
+    this.markerLayer = L.layerGroup().addTo(this.map);
+    this.heatmapLayer.addTo(this.map);
+    this.http.get('http://localhost:2500/tags')
+    .subscribe(
+      data => console.log(data)
+        //this.allTags = data;
+        ,
+      err => console.log(err)
+    );
   }
 
   changeOptions(){
     this.moreOptions = !this.moreOptions;
   }
 
-  search(){
-    console.log("Search");
-    this.layerGroup.clearLayers();
+  search(event){
+    let tags = event;
+    //clear both layers
+    this.markerLayer.clearLayers();
+    let coordinates = {
+      data: []
+    };
+    this.heatmapLayer.setData(coordinates);
+
     this.http.get('http://localhost:2500/restaurants')
     .subscribe(
-      data => L.geoJSON(data).addTo(this.layerGroup),
+      data => {
+        L.geoJSON(data,{
+          onEachFeature: function (feature) {
+            coordinates.data.push({
+              lat: feature.geometry.coordinates[1],
+              lng: feature.geometry.coordinates[0],
+              count: 1
+            });
+         }}).addTo(this.markerLayer);
+        if(this.heatmap){
+          this.heatmapLayer.setData(coordinates);
+          this.markerLayer.clearLayers();
+        }
+        
+      },
       err => console.log(err)
     );
   }
+
+  
 }
 
 
