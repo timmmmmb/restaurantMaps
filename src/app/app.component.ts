@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
   heatmap:boolean = false;
 
   heatmapLayer = new HeatmapOverlay({
-    radius: 0.02,
+    radius: 0.005,
     maxOpacity: 0.8,
     scaleRadius: true,
     useLocalExtrema: true,
