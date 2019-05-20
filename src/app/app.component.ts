@@ -15,7 +15,7 @@ declare var HeatmapOverlay;
 })
 
 export class AppComponent implements OnInit{
-  allTags:string[] =  ['Pizza','Pizzeria','Italien'];
+  allTags:string[] =  [];
   title = 'restaurantMaps';
   moreOptions:boolean = false;
   map;
@@ -79,8 +79,10 @@ export class AppComponent implements OnInit{
       data: []
     };
     this.heatmapLayer.setData(coordinates);
-
-    this.http.get('http://localhost:2500/restaurants')
+    let url = 'http://localhost:2500/restaurants';
+    console.log(tags);
+    url += '?tags='+tags;
+    this.http.get(url)
     .subscribe(
       data => {
         L.geoJSON(data,{
