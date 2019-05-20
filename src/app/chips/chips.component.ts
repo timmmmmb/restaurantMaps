@@ -75,7 +75,6 @@ export class Chips {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.allTags.filter(tag => tag.toLowerCase().indexOf(filterValue) === 0);
   }
 }

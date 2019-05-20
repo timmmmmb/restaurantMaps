@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
   heatmap:boolean = false;
 
   heatmapLayer = new HeatmapOverlay({
-    radius: 0.005,
+    radius: 0.01,
     maxOpacity: 0.8,
     scaleRadius: true,
     useLocalExtrema: true,
@@ -37,6 +37,11 @@ export class AppComponent implements OnInit{
   }
    
   ngOnInit() {
+    this.http.get('http://localhost:2500/tags')
+    .subscribe(
+      data => this.allTags = data as Array<string>,
+      err => console.log(err)
+    );
     const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
     const iconUrl = 'assets/leaflet/images/marker-icon.png';
     const shadowUrl = 'assets/leaflet/images/marker-shadow.png';
@@ -59,13 +64,7 @@ export class AppComponent implements OnInit{
 
     this.markerLayer = L.layerGroup().addTo(this.map);
     this.heatmapLayer.addTo(this.map);
-    this.http.get('http://localhost:2500/tags')
-    .subscribe(
-      data => console.log(data)
-        //this.allTags = data;
-        ,
-      err => console.log(err)
-    );
+    
   }
 
   changeOptions(){
