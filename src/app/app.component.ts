@@ -80,8 +80,9 @@ export class AppComponent implements OnInit{
     };
     this.heatmapLayer.setData(coordinates);
     let url = 'http://localhost:2500/restaurants';
-    console.log(tags);
-    url += '?tags='+tags;
+    if(tags.length !== 0){
+      url += '?tags='+tags;
+    }
     this.http.get(url)
     .subscribe(
       data => {
