@@ -16,7 +16,7 @@ declare var HeatmapOverlay;
 
 export class AppComponent implements OnInit{
   allTags:string[] =  [];
-  title = 'restaurantMaps';
+  title = 'Visualization of swiss restaurants';
   moreOptions:boolean = false;
   map;
   markerLayer;

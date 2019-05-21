@@ -1,11 +1,17 @@
 #map {
     height: 720px;
-    width: 80%;
-    margin-left: 10%
 }
 
 .options{
-    margin-left: 5%;
-    margin-right: 5%;
     margin-bottom: 50px;
+}
+
+mat-card {
+    margin: 65px 65px 0px;
+    padding: 40px;
+}
+
+mat-card-title {
+    padding: 10px 0 5px;
+    font-size: 32px;
 }
