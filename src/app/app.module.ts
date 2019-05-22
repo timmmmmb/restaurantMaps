@@ -10,7 +10,6 @@ import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from '../material-module';
 import { DoubleSlider } from './doubleslider/doubleslider.component';
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { MatSlidefModule } from '../../slidef';
 
@@ -29,8 +28,7 @@ import { MatSlidefModule } from '../../slidef';
     HttpClientModule,
     DemoMaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
-    LeafletModule.forRoot()
+    ReactiveFormsModule
   ],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent],

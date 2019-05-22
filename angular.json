@@ -29,11 +29,14 @@
             "styles": [
               "src/styles.css",
               "src/assets/leaflet/leaflet.css",
-              "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+              "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
+              "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
+              "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
             ],
-            "scripts": ["src/assets/leaflet/leaflet.js",
+            "scripts": ["./node_modules/leaflet/leaflet.js",
               "./node_modules/heatmap.js/build/heatmap.js",
-              "./node_modules/leaflet-heatmap/leaflet-heatmap.js"],
+              "./node_modules/leaflet-heatmap/leaflet-heatmap.js",
+              "./node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
