@@ -43,9 +43,9 @@ export class AppComponent implements OnInit{
       data => this.allTags = data as Array<string>,
       err => console.log(err)
     );
-    const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
-    const iconUrl = 'assets/leaflet/images/marker-icon.png';
-    const shadowUrl = 'assets/leaflet/images/marker-shadow.png';
+    const iconRetinaUrl = 'leaflet/marker-icon-2x.png';
+    const iconUrl = 'leaflet/marker-icon.png';
+    const shadowUrl = 'leaflet/marker-shadow.png';
     const iconDefault = icon({
       iconRetinaUrl,
       iconUrl,

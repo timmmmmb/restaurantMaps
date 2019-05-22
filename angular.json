@@ -28,12 +28,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/leaflet/leaflet.css",
+              "./node_modules/leaflet/dist/leaflet.css",
               "./node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
               "./node_modules/leaflet.markercluster/dist/MarkerCluster.css",
               "./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css"
             ],
-            "scripts": ["./node_modules/leaflet/leaflet.js",
+            "scripts": ["./node_modules/leaflet/dist/leaflet.js",
               "./node_modules/heatmap.js/build/heatmap.js",
               "./node_modules/leaflet-heatmap/leaflet-heatmap.js",
               "./node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js"],
