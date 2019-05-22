@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js';
-import '../../node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js';
 import { HttpClient } from '@angular/common/http';
+import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js';
+//import '../../node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js';
+import 'leaflet';
+import 'leaflet.markercluster';
 import { icon, Marker } from 'leaflet';
 declare let L;
 declare var HeatmapOverlay;
@@ -62,8 +64,8 @@ export class AppComponent implements OnInit{
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
-    //this.markerLayer =  L.markerClusterGroup().addTo(this.map);
-    this.markerLayer = L.layerGroup().addTo(this.map);
+    this.markerLayer =  L.markerClusterGroup().addTo(this.map);
+    //this.markerLayer = L.layerGroup().addTo(this.map);
     this.heatmapLayer.addTo(this.map);
     
   }
