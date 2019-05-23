@@ -1,15 +1,6 @@
 <div class="col-md-8 mr-auto ml-auto">
-  <span>Stars</span>
-  <i class="material-icons">stars</i>
-  <mat-slidef
-    [lang]="'en'"
-    [float_]="false"
-    [thumb-label]="true"
-    [values]="rangeslideData"
-    [max]="5"
-    [value]="rangeslideData.range_end"
-    [startRange]="startRangevalue"
-    [min]="1"
-  >
-  </mat-slidef>
+  <span *ngFor="let star of stars">
+    <i *ngIf="star.selected" (click)="click(star.value)" class="material-icons gold">stars</i>
+    <i *ngIf="!star.selected" (click)="click(star.value)" class="material-icons">stars</i>
+  </span>
 </div>

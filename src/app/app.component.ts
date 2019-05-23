@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import '../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.js';
-//import '../../node_modules/leaflet.markercluster/dist/leaflet.markercluster-src.js';
 import 'leaflet';
 import 'leaflet.markercluster';
 import { icon, Marker } from 'leaflet';
+import { Star } from './doubleslider/doubleslider.component.js';
 declare let L;
 declare var HeatmapOverlay;
 
@@ -24,6 +24,7 @@ export class AppComponent implements OnInit{
   map;
   markerLayer;
   heatmap:boolean = false;
+  stars:Star[];
 
   heatmapLayer = new HeatmapOverlay({
     radius: 0.01,
@@ -40,6 +41,7 @@ export class AppComponent implements OnInit{
   }
    
   ngOnInit() {
+    console.log(window.location.href);
     this.http.get('http://localhost:2500/tags')
     .subscribe(
       data => this.allTags = data as Array<string>,
@@ -62,7 +64,7 @@ export class AppComponent implements OnInit{
 
     this.map = L.map('map').setView([46.94809, 7.44744], 12);
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			attribution: 'open street map'
     }).addTo(this.map);
     this.markerLayer =  L.markerClusterGroup().addTo(this.map);
     //this.markerLayer = L.layerGroup().addTo(this.map);

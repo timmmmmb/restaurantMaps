@@ -4,7 +4,7 @@
         <div class="options" mat-dialog-content>
             <chips [allTags]="allTags" (search)="search($event)"></chips>
             <div *ngIf="moreOptions">
-                <!--<doubleslider></doubleslider>-->
+                <doubleslider (emit)="stars"></doubleslider>
                 <mat-checkbox [checked]="heatmap" (change)="heatmap = !heatmap">HeatMap</mat-checkbox>
             </div>
             <div mat-dialog-actions align="end">
