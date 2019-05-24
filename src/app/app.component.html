@@ -1,7 +1,6 @@
 <mat-card>
     <mat-card-title>{{title}}</mat-card-title>
     <mat-card-content>
-        
         <div class="options" mat-dialog-content>
             <mat-accordion>
                 <chips [allTags]="allTags" (search)="search($event)"></chips>

@@ -25,9 +25,10 @@ export class AppComponent implements OnInit{
   markerLayer;
   heatmap:boolean = false;
   stars:Star[];
+  baseurl;
 
   heatmapLayer = new HeatmapOverlay({
-    radius: 0.01,
+    radius: 0.025,
     maxOpacity: 0.8,
     scaleRadius: true,
     useLocalExtrema: true,
@@ -41,8 +42,9 @@ export class AppComponent implements OnInit{
   }
    
   ngOnInit() {
-    console.log(window.location.href);
-    this.http.get('http://localhost:2500/tags')
+    this.baseurl = window.location.href;
+    this.baseurl =  this.baseurl.slice(0, this.baseurl.indexOf(":", 8));
+    this.http.get(this.baseurl+':2500/tags')
     .subscribe(
       data => this.allTags = data as Array<string>,
       err => console.log(err)
@@ -67,7 +69,6 @@ export class AppComponent implements OnInit{
 			attribution: 'open street map'
     }).addTo(this.map);
     this.markerLayer =  L.markerClusterGroup().addTo(this.map);
-    //this.markerLayer = L.layerGroup().addTo(this.map);
     this.heatmapLayer.addTo(this.map);
     
   }
@@ -84,7 +85,7 @@ export class AppComponent implements OnInit{
       data: []
     };
     this.heatmapLayer.setData(coordinates);
-    let url = 'http://localhost:2500/restaurants';
+    let url = this.baseurl+':2500/restaurants';
     if(tags.length !== 0){
       url += '?tags='+tags;
     }
