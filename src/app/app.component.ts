@@ -93,7 +93,8 @@ export class AppComponent implements OnInit{
     .subscribe(
       data => {
         var geojsonLayer =  L.geoJSON(data,{
-          onEachFeature: function (feature) {
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup('<p>Name: '+feature.properties.name+'</p><p>Tags: '+feature.properties.tags+'</p><p>Website: '+feature.properties.website+'</p>');
             coordinates.data.push({
               lat: feature.geometry.coordinates[1],
               lng: feature.geometry.coordinates[0],
