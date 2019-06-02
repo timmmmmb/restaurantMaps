@@ -10,7 +10,7 @@
                         More Options
                     </mat-panel-title>
                     </mat-expansion-panel-header>
-                    <doubleslider (emit)="stars"></doubleslider>
+                    <doubleslider (emit)="changeStars($event)"></doubleslider>
                     <mat-checkbox [checked]="heatmap" (change)="heatmap = !heatmap">HeatMap</mat-checkbox>
                 </mat-expansion-panel>
             </mat-accordion>  

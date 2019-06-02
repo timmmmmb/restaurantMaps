@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
   map;
   markerLayer;
   heatmap:boolean = false;
-  stars:Star[];
+  stars:Star[] = [new Star(1,true),new Star(2,true),new Star(3,true),new Star(4,true),new Star(5,true)];
   baseurl;
 
   heatmapLayer = new HeatmapOverlay({
@@ -77,6 +77,10 @@ export class AppComponent implements OnInit{
     this.moreOptions = !this.moreOptions;
   }
 
+  changeStars(stars:Star[]){
+    this.stars = stars;
+  }
+
   search(event){
     let tags = event;
     //clear both layers
@@ -86,15 +90,33 @@ export class AppComponent implements OnInit{
     };
     this.heatmapLayer.setData(coordinates);
     let url = this.baseurl+':2500/restaurants';
-    if(tags.length !== 0){
-      url += '?tags='+tags;
+    
+    let defaultStars:Boolean = true;
+    let starsParameter = "";
+    this.stars.forEach(function(star){
+      if(!star.selected){
+        defaultStars = false;
+      }else{
+        starsParameter += star.value+",";
+      }
+    });
+    starsParameter = starsParameter.substring(0,starsParameter.length-1);
+    if(tags.length !== 0||!defaultStars){
+      url+='?';
     }
+    if(tags.length !== 0){
+      url += 'tags='+tags;
+    }
+    if(!defaultStars){
+      url += 'stars='+starsParameter;
+    }
+    console.log(url);
     this.http.get(url)
     .subscribe(
       data => {
         var geojsonLayer =  L.geoJSON(data,{
           onEachFeature: function (feature, layer) {
-            layer.bindPopup('<p>Name: '+feature.properties.name+'</p><p>Tags: '+feature.properties.tags+'</p>'+(feature.properties.website!=null?'<p>Website: '+feature.properties.website+'</p>':''));
+            layer.bindPopup('<p>Name: '+feature.properties.name+'</p><p>Tags: '+feature.properties.tags+'</p>'+(feature.properties.website!=null?'<p>Website: <a href="'+feature.properties.website+'">'+feature.properties.website+'</a></p>':''));
             coordinates.data.push({
               lat: feature.geometry.coordinates[1],
               lng: feature.geometry.coordinates[0],
