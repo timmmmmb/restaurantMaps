@@ -90,6 +90,7 @@ export class AppComponent implements OnInit{
     };
     this.heatmapLayer.setData(coordinates);
     let url = this.baseurl+':2500/restaurants';
+    let urlParameter = [];
     
     let defaultStars:Boolean = true;
     let starsParameter = "";
@@ -101,14 +102,14 @@ export class AppComponent implements OnInit{
       }
     });
     starsParameter = starsParameter.substring(0,starsParameter.length-1);
-    if(tags.length !== 0||!defaultStars){
-      url+='?';
-    }
     if(tags.length !== 0){
-      url += 'tags='+tags;
+      urlParameter.push('tags='+tags);
     }
     if(!defaultStars){
-      url += 'stars='+starsParameter;
+      urlParameter.push('stars='+starsParameter);
+    }
+    if(urlParameter.length !== 0){
+      url+='?'+urlParameter.join('&');
     }
     console.log(url);
     this.http.get(url)
