@@ -121,7 +121,7 @@ export class AppComponent implements OnInit{
               '<p>'+
                 'Name: '+feature.properties.name+'<br>'+
                 'Tags: '+feature.properties.tags+'<br>'+
-                (feature.properties.stars!==null?'Stars: ' + feature.properties.stars:'')+'<br>'+
+                (feature.properties.stars!==null?'Stars: '+feature.properties.stars+'<br>':'')+
                 (feature.properties.website!=null?'Website: <a href="'+feature.properties.website+'">'+feature.properties.website+'</a>':'')+
               '</p>'
             );
